@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudo DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div id="msg">Clique aqui</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+        window.document.write('O primeiro parágrafo está escrito: ' + p1.innerText ) //innerText pega o conteúdo do p1 / innerHTML pega as formatações tbm
+
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'mudando o texto da div com JS através do .innerText'
+        */
+
+        /* window.document.getElementById('msg').style.background ='green'
+        window.document.getElementById('msg').innerText = 'outra forma de mudar o texto'
+        */
+        window.document.querySelector('div#msg').style.background = 'green'
+        window.document.querySelector('div#msg').innerText = 'usando querySelector'
+    </script>
+</body>
+</html>
