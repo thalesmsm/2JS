@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BRASILEIRO OU ESTRANGEIRO ?</h1>
+    <input type="text" name="txtpais" placeholder="Ex: Brasil" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificarNacionalidade()">
+    <div id="res"></div>
+
+    <script>
+        
+        function verificarNacionalidade() {
+            var pais = String(document.querySelector('#txtpais').value) // sempre converter as variáveis para o tipo que pretendemos usar
+            var res = document.querySelector('#res')
+            if (pais.toUpperCase() == 'BRASIL') {
+                res.innerHTML = 'Brasileiro'
+            } else {
+                res.innerHTML = 'Estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>

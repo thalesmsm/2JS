@@ -19,16 +19,19 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
+    <div id="area"> 
         INTERAJA
-    </div> <!-- com o addEventListener no script não é necessário chamar as funções no HTML -->
+    </div> <!-- com o addEventListener no script não é necessário chamar as funções no HTML onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -->
 
     <script>
         var a = document.querySelector('div#area')
-        a.addEventListener('click', clicar)
+        a.addEventListener('mousedown', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
 
         function clicar() {
             a.innerHTML = 'Clicou'
+            a.style.backgroundColor = 'blue'
         }
 
         function entrar() {
@@ -36,7 +39,8 @@
         }
 
         function sair () {
-            document.querySelector('div#area').innerHTML = 'Saiu'
+            a.innerHTML = 'Saiu'
+            a.style.backgroundColor = 'rgb(80, 196, 80)'
         }
     </script>
 </body>

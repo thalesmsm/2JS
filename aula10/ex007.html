@@ -24,11 +24,9 @@
     </div>
     <script>
         function somar() {
-            var tn1 = document.querySelector('#txtn1')
-            var tn2 = document.querySelector('#txtn2')
+            var n1 = Number(document.querySelector('#txtn1').value)
+            var n2 = Number(document.querySelector('#txtn2').value)
             var res = document.getElementById('res')
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
             var s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
         }
