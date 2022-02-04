@@ -1,5 +1,5 @@
 function tabuada() {
-    var n1 = document.querySelector('#txtn1')
+    var n1 = document.querySelector('#txtn')
     var res = document.querySelector('#res')
     // foi digitado algum numero?
     if (n1.value.length == 0) {
