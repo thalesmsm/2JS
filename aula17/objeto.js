@@ -3,9 +3,9 @@ let amigo = {
     sexo: 'M',
     peso: 80,
     engordar(p=0) {
-        console.log('engordou')
+        console.log(`engordou ${p} Kg`)
         this.peso += p
     }
 }
-amigo.engordar(9)
+amigo.engordar(5)
 console.log(`${amigo.nome} pesa ${amigo.peso}Kg`)
