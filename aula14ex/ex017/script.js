@@ -7,10 +7,13 @@ function tabuada() {
         res.innerHTML = 'O número não foi digitado'
     } else {
         // gerar tabuada
-        res.innerHTML = ''
+
         var numero1 = Number(n1.value)
+        let tabuada = document.getElementById('tabuada')
         for (var i = 1; i <= 10; i++){ 
-            res.innerHTML = `${numero1} x ${i} = ${numero1 * i}`   
+            let item = document.createElement('option')
+            item.text = `${numero1} x ${ i} = ${numero1*i}`
+            tabuada.appendChild(item)
         }
         
     }
